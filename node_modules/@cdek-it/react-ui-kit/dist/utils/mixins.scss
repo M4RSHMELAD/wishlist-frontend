@@ -1,0 +1,36 @@
+@mixin media-min-sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin media-min-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-min-lg {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media-min-xl {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin media-min-2xl {
+  @media screen and (min-width: 1536px) {
+    @content;
+  }
+}
+
+// Включение hover только на десктопе
+@mixin media-hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}

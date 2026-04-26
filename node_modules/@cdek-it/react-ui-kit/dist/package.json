@@ -1,0 +1,29 @@
+{
+  "name": "@cdek-it/react-ui-kit",
+  "version": "1.2.14",
+  "description": "Тема для primereact",
+  "scripts": {
+    "build": "npm run clean && npm run cp && npm run build-themes",
+    "build-themes": "npm run build-theme-light && npm run build-theme-dark",
+    "build-theme-light": "sass --load-path=node_modules/ --update src/themes/theme-light/theme.scss:dist/theme-light.css",
+    "build-theme-dark": "sass --load-path=node_modules/ --update src/themes/theme-dark/theme.scss:dist/theme-dark.css",
+    "clean": "rm -rf dist",
+    "cp": "cp -r src dist && cp package.json dist && cp -r src/themes/theme-light/fonts dist/fonts",
+    "package": "npm run build && npm pack",
+    "dev-version": "npm version prerelease --no-git-tag-version --force  --preid development"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@fontsource/roboto": "^5.1.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.0",
+    "sass": "^1.77.6"
+  }
+}

@@ -1,0 +1,33 @@
+// Генерируем css-переменные для коллекций Primary, Service, Surface в :root
+:root {
+    @if variable-exists(primitives) {
+        @each $name, $color in $primitives {
+            --#{$name}-0: #{mix(mix($color, #fff, 76%), #000, 80%)};
+            --#{$name}-50: #{mix($color, #fff, 5%)};
+            --#{$name}-100: #{mix($color, #fff, 24%)};
+            --#{$name}-200: #{mix($color, #fff, 43%)};
+            --#{$name}-300: #{mix($color, #fff, 62%)};
+            --#{$name}-400: #{mix($color, #fff, 81%)};
+            --#{$name}-500: #{mix($color, #fff, 100%)};
+
+            --#{$name}-600: #{mix($color, #000, 85%)};
+            --#{$name}-700: #{mix($color, #000, 70%)};
+            --#{$name}-800: #{mix($color, #000, 55%)};
+            --#{$name}-900: #{mix($color, #000, 40%)};
+
+
+            --#{$name}-alpha: #{mix($color, transparent, 10%)};
+        }
+    }
+}
+
+// Генерируем css-переменные для коллекций Neutrals в :root
+:root {
+    @if variable-exists(neutrals) {
+        @each $name, $color in $neutrals {
+            @for $i from 1 through 10 {
+                --#{$name}-#{$i * 10}: #{mix($color, transparent, $i * 10%)};
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+// core
+.p-icon-field {
+    position: relative;
+    flex-grow: 1;
+}
+
+.p-icon-field > .p-input-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5rem;
+    left: 0.7rem;
+}

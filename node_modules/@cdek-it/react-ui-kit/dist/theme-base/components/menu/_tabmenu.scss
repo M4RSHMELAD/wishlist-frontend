@@ -1,0 +1,47 @@
+.p-tabmenu {
+    .p-tabmenu-nav {
+        background: $tabviewNavBg;
+        border-bottom: $tabviewNavBorder;
+
+        .p-tabmenuitem {
+            margin-right: $tabviewHeaderSpacing;
+
+            .p-menuitem-link {
+                background: $tabviewHeaderBg;
+                color: $tabviewHeaderTextColor;
+                font-weight: $tabviewHeaderFontWeight;
+
+                border-bottom: $tabviewHeaderBorder;
+
+                padding: $tabviewHeaderPadding;
+                margin: $tabviewHeaderMargin;
+
+                transition: $listItemTransition;
+
+                .p-menuitem-icon {
+                    margin-right: $inlineSpacing;
+                }
+
+                &:not(.p-disabled):focus-visible {
+                    @include focused-inset();
+                }
+            }
+
+            &:not(.p-highlight):not(.p-disabled):hover {
+                .p-menuitem-link {
+                    background: $tabviewHeaderHoverBg;
+                    border-color: $tabviewHeaderHoverBorderColor;
+                    color: $tabviewHeaderHoverTextColor;
+                }
+            }
+
+            &.p-highlight {
+                .p-menuitem-link {
+                    background: $tabviewHeaderActiveBg;
+                    border-color: $tabviewHeaderActiveBorderColor;
+                    color: $tabviewHeaderActiveTextColor;
+                }
+            }
+        }
+    }
+}

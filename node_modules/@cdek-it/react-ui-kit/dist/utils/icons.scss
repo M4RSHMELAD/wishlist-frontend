@@ -1,0 +1,17 @@
+$size: (
+  "xs": 0.75rem, // 10.5px
+  "sm": 0.875rem, // 12.25px
+  "md": 1rem, // 14px
+  "lg": 1.125rem, // 15.75px
+  "xl": 1.25rem, // 17.5px
+  "2xl": 1.5rem, // 21px
+  "3xl": 1.875rem, // 26.25px
+  "4xl": 2.25rem, // 31.5px
+);
+
+@each $name, $size in $size {
+  svg.icon-#{$name} {
+    width: $size;
+    height: $size;
+  }
+}

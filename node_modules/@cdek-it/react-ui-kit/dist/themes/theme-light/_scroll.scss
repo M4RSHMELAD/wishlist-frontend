@@ -1,0 +1,89 @@
+.hide-scroll::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+.custom-scroll {
+  scrollbar-color: transparent transparent;
+
+  &::-webkit-scrollbar:horizontal {
+    height: 0;
+    width: 0;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb:horizontal {
+    display: none;
+  }
+}
+
+.thin-scroll-9,
+.thin-scroll {
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  --thin-scroll-size: 4px;
+
+  &::-webkit-scrollbar {
+    width: var(--thin-scroll-size);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--surface-200);
+    border-radius: 7px;
+    width: var(--thin-scroll-size);
+  }
+}
+
+.thin-scroll-9 {
+  --thin-scroll-size: 9px;
+}
+
+.mobile-scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  width: 100vw;
+  -webkit-overflow-scrolling: touch;
+
+  // Попробуем с этим решением, которое добавляет отступ справа для мобильного скрола
+  > div::after {
+    content: '';
+    min-width: 1px;
+  }
+
+  @for $i from 1 through 10 {
+    &.mobile-scroll-pr-#{$i} {
+      > div::after {
+        content: '';
+        min-width: 0.25rem * $i;
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+    overflow: unset;
+    margin-inline: 0;
+
+    > div::after {
+      display: none;
+    }
+  }
+
+  &.no-margin {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

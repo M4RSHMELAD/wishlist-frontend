@@ -1,0 +1,117 @@
+@use "sass:math";
+
+@mixin style-severity($color-background, $border, $color-icon) {
+    background: $color-background;
+    border: $border;
+
+    .p-toast-message-content {
+        border-left: $messageBorderWidth solid $color-icon;
+    }
+
+    .p-toast-message-icon {
+        color: $color-icon;
+    }
+
+    .p-toast-icon-close {
+        color: $color-icon;
+        border: $border;
+
+        background: transparent;
+
+        &:hover {
+            color: $color-icon;
+            border-color: $color-icon;
+
+            transition: $formElementTransition;
+        }
+    }
+}
+
+.p-toast {
+    opacity: $toastOpacity;
+
+    .p-toast-message {
+        overflow: hidden;
+
+        margin: $toastMargin;
+        box-shadow: $toastShadow;
+        border-radius: $borderRadius;
+
+        .p-toast-message-content {
+            gap: 1rem;
+
+            padding: $toastPadding;
+            border-left-width: $toastBorderWidth;
+            border-left-style: solid;
+
+            .p-toast-message-text {
+                margin: $toastMessageTextMargin;
+            }
+
+            .p-toast-message-icon {
+                font-size: $toastIconFontSize;
+
+                &.p-icon {
+                    width: $toastIconFontSize;
+                    height: $toastIconFontSize;
+                }
+            }
+
+            .p-toast-summary {
+                font-weight: $toastTitleFontWeight;
+                font-size: $messageTextSummaryFontSize;
+                color: $messageTextSummaryColor;
+
+                margin: auto 0;
+            }
+
+            .p-toast-detail {
+                font-weight: $messageTextDetailFontWeight;
+                font-size: $messageTextDetailFontSize;
+                color: $messageTextDetailColor;
+
+                margin-top: 0.25rem;
+            }
+        }
+
+        .p-toast-icon-close {
+            width: $toastIconFontSize;
+            height: $toastIconFontSize;
+            border-radius: $actionIconBorderRadius;
+            background: $surface-ground;
+            transition: $actionIconTransition;
+        }
+
+        &.p-toast-message-info {
+            @include style-severity(
+                $color-background: $infoMessageBg,
+                $border: $infoMessageBorder,
+                $color-icon: $infoMessageIconColor
+            );
+        }
+
+        &.p-toast-message-success {
+            @include style-severity(
+                $color-background: $successMessageBg,
+                $border: $successMessageBorder,
+                $color-icon: $successMessageIconColor
+            );
+        }
+
+        &.p-toast-message-warn {
+            @include style-severity(
+                $color-background: $warningMessageBg,
+                $border: $warningMessageBorder,
+                $color-icon: $warningMessageIconColor
+            );
+        }
+
+        &.p-toast-message-error {
+            @include style-severity(
+                $color-background: $dangerMessageBg,
+                $border: $dangerMessageBorder,
+                $color-icon: $dangerMessageIconColor
+            );
+        }
+    }
+}

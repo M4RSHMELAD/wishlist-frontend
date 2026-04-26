@@ -1,0 +1,51 @@
+@use 'sass:math';
+
+.p-chip {
+    height: $chipHeight;
+    
+    color: $chipTextColor;
+    
+    border-radius: $chipBorderRadius;
+    border: $chipBorder;
+
+    padding: $chipPadding;
+    background-color: $chipBg;
+    
+
+    &.p-disabled {
+        color: $disabledButtonTextColor;
+        border-color: $disabledButtonBorderColor;
+        background-color: $disabledButtonBg;
+    }
+
+    .p-chip-text {
+        line-height: 1.5;
+        margin-top: math.div(nth($inputPadding, 1), 2);
+        margin-bottom: math.div(nth($inputPadding, 1), 2);
+    }
+
+    .p-chip-icon {
+        margin-right: $inlineSpacing;
+    }
+
+    img {
+        width: 1.5 + nth($inputPadding, 1);
+        height: 1.5 + nth($inputPadding, 1);
+        margin-left: -1 * nth($inputPadding, 2);
+        margin-right: $inlineSpacing;
+    }
+
+    .p-chip-remove-icon {
+        border-radius: $borderRadius;
+        transition: $actionIconTransition;
+        margin-left: $inlineSpacing;
+        
+        &:focus-visible {
+            @include focused();
+        }
+
+        &:focus {
+            outline: 0 none;
+        }
+    }
+}

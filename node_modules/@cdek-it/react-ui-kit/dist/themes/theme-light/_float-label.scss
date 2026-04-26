@@ -1,0 +1,123 @@
+.p-float-label {
+  // label в обычном состоянии 1 rem
+  & > .p-inputwrapper label,
+  & > label {
+    font-size: 1rem !important;
+    color: var(--text-color-secondary);
+    opacity: 0.6;
+  }
+
+  // стили для label в состоянии focus
+  & > .p-inputwrapper-filled ~ label,
+  & > .p-inputwrapper-focus ~ label,
+  & > .p-tooltip-target-wrapper ~ label,
+  & > .p-inputwrapper:has(input.p-filled) ~ label,
+  & > input.p-filled ~ label,
+  & > input:-webkit-autofill ~ label,
+  & > input:focus ~ label,
+  & > input.p-inputmask.p-invalid:not(:placeholder-shown) ~ label,
+  & > textarea.p-filled ~ label,
+  & > textarea:focus ~ label {
+    // меняем позиция
+    top: 1.25rem !important;
+    // меняем размер шрифта
+    font-size: .825rem !important;
+    color: var(--text-color-secondary) !important;
+    opacity: 1;
+  }
+
+  & > textarea ~ label {
+    background: $inputBg;
+  }
+
+  // стили для вложенных компонетов input select и тд
+  // изменяем высоту в отступ
+  & .p-inputtext.p-component:not(textarea), {
+    height: 4rem !important;
+    padding-top: 1rem !important;
+  }
+
+  & textarea.p-inputtext.p-component, {
+    padding-top: 1.75rem !important;
+    line-height: 1.5rem;
+  }
+  // стили для стрелки select
+  // так как есть  padding-top: 1rem !important в родителе надо его убрать
+  & > .p-dropdown .p-dropdown-trigger{
+    margin-top: -1rem;
+  }
+}
+
+// Стили для иконок
+.p-icon-field .p-input-icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.5rem;
+  left: 0.5rem;
+  font-size: 1rem;
+
+  &.p-input-icon--clear {
+    margin-top: 0;
+    left: auto;
+    right: 0 !important;
+    height: 100%;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+  }
+}
+
+.p-icon-field.p-icon-field-right > .p-input-icon,
+.p-icon-field.p-icon-field-right > .p-float-label > .p-input-icon {
+  left: auto;
+  right: 0.75rem;
+}
+
+.p-icon-field.p-icon-field-right > .p-inputtext,
+.p-icon-field.p-icon-field-right > .p-float-label > .p-inputtext {
+  padding-right: 2.5rem;
+}
+
+// позиция первой иконки справа,кастоиный класс first-icon
+.p-icon-field-right > .first-icon,
+.p-icon-field-right > .p-float-label > .first-icon {
+  right: 0.75rem;
+}
+// позиция второй иконки справа, кастоиный класс second-icon
+.p-icon-field-right > .second-icon,
+.p-icon-field-right > .p-float-label > .second-icon {
+  right: 3rem;
+}
+// позиция первой иконки в select справа,кастоиный класс first-icon
+.p-icon-field-right > .p-dropdown ~ .first-icon,
+.p-icon-field-right > .p-float-label > .p-dropdown ~ .first-icon {
+  right: 3rem;
+}
+// позиция второй иконки в select справа,кастоиный класс second-icon
+.p-icon-field-right > .p-dropdown ~ .second-icon,
+.p-icon-field-right > .p-float-label > .p-dropdown ~ .second-icon {
+  right: 5rem;
+}
+
+// inputgroup
+.p-inputgroup > .p-icon-field > .p-inputtext,
+.p-inputgroup > .p-icon-field > .p-float-label > .p-inputtext {
+  border-radius: 0;
+  width: 100%;
+}
+
+.p-inputgroup > .p-icon-field:last-child > .p-inputtext,
+.p-inputgroup > .p-icon-field:last-child > .p-float-label > .p-inputtext {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.p-inputgroup > .p-icon-field:first-child > .p-inputtext,
+.p-inputgroup > .p-icon-field:first-child > .p-float-label > .p-inputtext {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.p-inputgroup > .p-icon-field + .p-inputgroup-addon {
+  border-left: 0;
+}

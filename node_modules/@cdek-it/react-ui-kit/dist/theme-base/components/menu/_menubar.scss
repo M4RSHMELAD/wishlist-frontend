@@ -1,0 +1,110 @@
+.p-menubar {
+	display: flex;
+
+	[class*="list"][level="0"] {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		gap: $menuitemSpacing;
+
+		& > .p-menuitem {
+			margin: 0;
+		}
+	}
+
+	[class*="list"]:not([level="0"]) {
+		min-width: $menuWidth;
+
+		border-radius: $borderRadius;
+		border: $overlayMenuBorder;
+
+		padding: $overlayMenuPadding;
+
+		background-color: $overlayMenuBg;
+		box-shadow: $overlayMenuShadow;
+
+		z-index: 2;
+	}
+
+	[class*="list"][level="1"] {
+		margin-top: $menuitemSpacing;
+	}
+
+	[class*="list"]:not([level="0"]):not([level="1"]) {
+		margin-left: $menuitemSpacing;
+		margin-top: -$menuitemSpacing;
+	}
+
+	@include menuitem();
+	@include menuitem-separator();
+}
+
+@media screen and (max-width: 960px) {
+	.p-menubar {
+		position: relative;
+
+		.p-menubar-button {
+			display: flex;
+
+			@include action-icon(false);
+			transition: $actionIconTransition;
+		}
+
+		[aria-expanded="false"] + [class*="list"][level="0"] {
+			display: none;
+		}
+
+		[class*="list"][level="0"] {
+			position: absolute;
+			left: 0;
+			top: 100%;
+
+			display: flex;
+			flex-direction: column;
+
+			min-width: $menuWidth;
+
+			border-radius: $borderRadius;
+			border: $overlayMenuBorder;
+
+			padding: $overlayMenuPadding;
+			margin-top: $menuitemSpacing;
+
+			background-color: $overlayMenuBg;
+			box-shadow: $overlayMenuShadow;
+
+			z-index: 2;
+
+			[aria-expanded="false"] {
+				.p-submenu-icon {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+
+		[class*="list"]:not([level="0"]) {
+			width: 100%;
+			position: static;
+
+			border: none;
+			border-radius: 0;
+
+			margin: 0 !important;
+			padding: $overlayMenuPadding 0 0 $menuNodeChildrenPadding;
+
+			box-shadow: none;
+
+			[aria-expanded="false"] {
+				.p-submenu-icon {
+					transform: rotate(0deg);
+				}
+			}
+
+			[aria-expanded="true"] {
+				.p-submenu-icon {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+}

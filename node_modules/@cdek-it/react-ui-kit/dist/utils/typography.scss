@@ -1,0 +1,441 @@
+// replace styleclass replate to @apply
+
+.line-height-3 {
+  line-height: 1.5;
+}
+
+.line-height-normal {
+  line-height: normal;
+}
+
+////////////////// THEME STYLES //////////////////
+
+// Typography
+// Title
+
+.title-h1 {
+  @apply text-4xl font-bold line-height-normal no-underline text-color;
+}
+.title-h2 {
+  @apply text-2xl font-bold line-height-normal no-underline text-color;
+}
+.title-h3 {
+  @apply text-xl font-bold line-height-normal no-underline text-color;
+}
+.title-h4 {
+  @apply text-lg font-bold line-height-normal no-underline text-color;
+}
+.title-h5 {
+  @apply text-base font-bold line-height-normal no-underline text-color;
+}
+.title-h6 {
+  @apply text-sm font-bold line-height-normal no-underline text-color;
+}
+
+// Body large bold
+// Paragraph: false
+
+.body-bold-lg {
+  @apply text-lg font-bold no-underline text-color;
+}
+.body-bold-lg-secondary {
+  @apply text-lg font-bold no-underline text-color-secondary;
+}
+.body-bold-lg-primary {
+  @apply text-lg font-bold no-underline text-primary;
+}
+
+.body-bold-lg-disabled {
+  @apply text-lg font-bold no-underline text-color opacity-60;
+}
+.body-bold-lg-secondary-disabled {
+  @apply text-lg font-bold no-underline text-color-secondary opacity-60;
+}
+.body-bold-lg-primary-disabled {
+  @apply text-lg font-bold no-underline text-primary opacity-60;
+}
+
+// Body large bold
+// Paragraph: true
+
+.body-bold-lg-paragraph {
+  @apply text-lg font-bold line-height-3 no-underline text-color;
+}
+.body-bold-lg-secondary-paragraph {
+  @apply text-lg font-bold line-height-3 no-underline text-color-secondary;
+}
+.body-bold-lg-primary-paragraph {
+  @apply text-lg font-bold line-height-3 no-underline text-primary;
+}
+
+.body-bold-lg-paragraph-disabled {
+  @apply text-lg font-bold line-height-3 no-underline text-color opacity-60;
+}
+.body-bold-lg-secondary-paragraph-disabled {
+  @apply text-lg font-bold line-height-3 no-underline text-color-secondary opacity-60;
+}
+.body-bold-lg-primary-paragraph-disabled {
+  @apply text-lg font-bold line-height-3 no-underline text-primary opacity-60;
+}
+
+// Body large medium
+// Paragraph: false
+
+.body-medium-lg {
+  @apply text-lg font-medium no-underline text-color;
+}
+.body-medium-lg-secondary {
+  @apply text-lg font-medium no-underline text-color-secondary;
+}
+.body-medium-lg-primary {
+  @apply text-lg font-medium no-underline text-primary;
+}
+
+.body-medium-lg-disabled {
+  @apply text-lg font-medium no-underline text-color opacity-60;
+}
+.body-medium-lg-secondary-disabled {
+  @apply text-lg font-medium no-underline text-color-secondary opacity-60;
+}
+.body-medium-lg-primary-disabled {
+  @apply text-lg font-medium no-underline text-primary opacity-60;
+}
+
+// Body large medium
+// Paragraph: true
+
+.body-medium-lg-paragraph {
+  @apply text-lg font-medium line-height-3 no-underline text-color;
+}
+.body-medium-lg-secondary-paragraph {
+  @apply text-lg font-medium line-height-3 no-underline text-color-secondary;
+}
+.body-medium-lg-primary-paragraph {
+  @apply text-lg font-medium line-height-3 no-underline text-primary;
+}
+
+.body-medium-lg-paragraph-disabled {
+  @apply text-lg font-medium line-height-3 no-underline text-color opacity-60;
+}
+.body-medium-lg-secondary-paragraph-disabled {
+  @apply text-lg font-medium line-height-3 no-underline text-color-secondary opacity-60;
+}
+.body-medium-lg-primary-paragraph-disabled {
+  @apply text-lg font-medium line-height-3 no-underline text-primary opacity-60;
+}
+
+// Body large regular
+// Paragraph: false
+
+.body-regular-lg {
+  @apply text-lg font-normal no-underline text-color;
+}
+.body-regular-lg-secondary {
+  @apply text-lg font-normal no-underline text-color-secondary line-height-normal;
+}
+.body-regular-lg-primary {
+  @apply text-lg font-normal no-underline text-primary;
+}
+
+.body-regular-lg-disabled {
+  @apply text-lg font-normal no-underline text-color opacity-60;
+}
+.body-regular-lg-secondary-disabled {
+  @apply text-lg font-normal no-underline text-color-secondary opacity-60;
+}
+.body-regular-lg-primary-disabled {
+  @apply text-lg font-normal no-underline text-primary opacity-60;
+}
+
+// Body large regular
+// Paragraph: true
+
+.body-regular-lg-paragraph {
+  @apply text-lg font-normal line-height-3 no-underline text-color;
+}
+.body-regular-lg-secondary-paragraph {
+  @apply text-lg font-normal line-height-3 no-underline text-color-secondary;
+}
+.body-regular-lg-primary-paragraph {
+  @apply text-lg font-normal line-height-3 no-underline text-primary;
+}
+
+.body-regular-lg-paragraph-disabled {
+  @apply text-lg font-normal line-height-3 no-underline text-color opacity-60;
+}
+.body-regular-lg-secondary-paragraph-disabled {
+  @apply text-lg font-normal line-height-3 no-underline text-color-secondary opacity-60;
+}
+.body-regular-lg-primary-paragraph-disabled {
+  @apply text-lg font-normal line-height-3 no-underline text-primary opacity-60;
+}
+
+// Body base bold
+// Paragraph: false
+
+.body-bold-base {
+  @apply text-base font-bold line-height-normal no-underline text-color;
+}
+.body-bold-base-secondary {
+  @apply text-base font-bold no-underline text-color-secondary;
+}
+.body-bold-base-primary {
+  @apply text-base font-bold no-underline text-primary;
+}
+
+.body-bold-base-disabled {
+  @apply text-base font-bold no-underline text-color opacity-60;
+}
+.body-bold-base-secondary-disabled {
+  @apply text-base font-bold no-underline text-color-secondary opacity-60;
+}
+.body-bold-base-primary-disabled {
+  @apply text-base font-bold no-underline text-primary opacity-60;
+}
+
+// Body base bold
+// Paragraph: true
+
+.body-bold-base-paragraph {
+  @apply text-base font-bold line-height-3 no-underline text-color;
+}
+.body-bold-base-secondary-paragraph {
+  @apply text-base font-bold line-height-3 no-underline text-color-secondary;
+}
+.body-bold-base-primary-paragraph {
+  @apply text-base font-bold line-height-3 no-underline text-primary;
+}
+
+.body-bold-base-paragraph-disabled {
+  @apply text-base font-bold line-height-3 no-underline text-color opacity-60;
+}
+.body-bold-base-secondary-paragraph-disabled {
+  @apply text-base font-bold line-height-3 no-underline text-color-secondary opacity-60;
+}
+.body-bold-base-primary-paragraph-disabled {
+  @apply text-base font-bold line-height-3 no-underline text-primary opacity-60;
+}
+
+// Body base medium
+// Paragraph: false
+
+.body-medium-base {
+  @apply text-base font-medium no-underline text-color;
+}
+.body-medium-base-secondary {
+  @apply text-base font-medium no-underline text-color-secondary;
+}
+.body-medium-base-primary {
+  @apply text-base font-medium no-underline text-primary;
+}
+
+.body-medium-base-disabled {
+  @apply text-base font-medium no-underline text-color opacity-60;
+}
+.body-medium-base-secondary-disabled {
+  @apply text-base font-medium no-underline text-color-secondary opacity-60;
+}
+.body-medium-base-primary-disabled {
+  @apply text-base font-medium no-underline text-primary opacity-60;
+}
+
+// Body base medium
+// Paragraph: true
+
+.body-medium-base-paragraph {
+  @apply text-base font-medium line-height-3 no-underline text-color;
+}
+.body-medium-base-secondary-paragraph {
+  @apply text-base font-medium line-height-3 no-underline text-color-secondary;
+}
+.body-medium-base-primary-paragraph {
+  @apply text-base font-medium line-height-3 no-underline text-primary;
+}
+
+.body-medium-base-paragraph-disabled {
+  @apply text-base font-medium line-height-3 no-underline text-color opacity-60;
+}
+.body-medium-base-secondary-paragraph-disabled {
+  @apply text-base font-medium line-height-3 no-underline text-color-secondary opacity-60;
+}
+.body-medium-base-primary-paragraph-disabled {
+  @apply text-base font-medium line-height-3 no-underline text-primary opacity-60;
+}
+
+// Body base regular
+// Paragraph: false
+
+.body-regular-base {
+  @apply text-base font-normal no-underline text-color line-height-normal;
+}
+.body-regular-base-secondary {
+  @apply text-base font-normal no-underline text-color-secondary line-height-normal;
+}
+.body-regular-base-primary {
+  @apply text-base font-normal no-underline text-primary line-height-normal;
+}
+
+.body-regular-base-disabled {
+  @apply text-base font-normal no-underline text-color opacity-60 line-height-normal;
+}
+.body-regular-base-secondary-disabled {
+  @apply text-base font-normal no-underline text-color-secondary opacity-60 line-height-normal;
+}
+.body-regular-base-primary-disabled {
+  @apply text-base font-normal no-underline text-primary opacity-60 line-height-normal;
+}
+
+// Body base regular
+// Paragraph: true
+
+.body-regular-base-paragraph {
+  @apply text-base font-normal line-height-3 no-underline text-color;
+}
+.body-regular-base-secondary-paragraph {
+  @apply text-base font-normal line-height-3 no-underline text-color-secondary;
+}
+.body-regular-base-primary-paragraph {
+  @apply text-base font-normal line-height-3 no-underline text-primary;
+}
+
+.body-regular-base-paragraph-disabled {
+  @apply text-base font-normal line-height-3 no-underline text-color opacity-60;
+}
+.body-regular-base-secondary-paragraph-disabled {
+  @apply text-base font-normal line-height-3 no-underline text-color-secondary opacity-60;
+}
+.body-regular-base-primary-paragraph-disabled {
+  @apply text-base font-normal line-height-3 no-underline text-primary opacity-60;
+}
+
+// Subtitle
+// Base: true
+
+.subtitle-base {
+  @apply text-base font-bold line-height-normal uppercase text-color;
+}
+.subtitle-base-secondary {
+  @apply text-base font-bold line-height-normal uppercase text-color-secondary;
+}
+.subtitle-base-primary {
+  @apply text-base font-bold line-height-normal uppercase text-primary;
+}
+
+// Subtitle
+// Base: false
+
+.subtitle-sm {
+  @apply text-sm font-bold line-height-normal uppercase text-color;
+}
+.subtitle-sm-secondary {
+  @apply text-sm font-bold line-height-normal uppercase text-color-secondary;
+}
+.subtitle-sm-primary {
+  @apply text-sm font-bold line-height-normal uppercase text-primary;
+}
+
+// Caption
+// Disabled: false
+
+.caption {
+  @apply text-sm font-normal line-height-normal no-underline text-color;
+}
+
+.caption-secondary {
+  @apply text-sm font-normal line-height-normal no-underline text-color-secondary;
+}
+
+.caption-primary {
+  @apply text-sm font-normal line-height-normal no-underline text-primary;
+}
+
+// Caption
+// Disabled: true
+
+.caption-disabled {
+  @apply text-sm font-normal line-height-normal no-underline text-color opacity-60;
+}
+
+.caption-secondary-disabled {
+  @apply text-sm font-normal line-height-normal no-underline text-color-secondary opacity-60;
+}
+
+.caption-primary-disabled {
+  @apply text-sm font-normal line-height-normal no-underline text-primary opacity-60;
+}
+
+// Service
+// Danger
+
+.service-danger-base {
+  @apply text-base font-normal line-height-normal no-underline text-danger;
+}
+
+.service-danger-sm {
+  @apply text-sm font-normal line-height-normal no-underline text-danger;
+}
+
+// Service
+// Warning
+
+.service-warning-base {
+  @apply text-base font-normal line-height-normal no-underline text-warning;
+}
+
+.service-warning-sm {
+  @apply text-sm font-normal line-height-normal no-underline text-warning;
+}
+
+// Service
+// Success
+
+.service-success-base {
+  @apply text-base font-normal line-height-normal no-underline text-success;
+}
+
+.service-success-sm {
+  @apply text-sm font-normal line-height-normal no-underline text-success;
+}
+
+// Service
+// Info
+
+.service-info-base {
+  @apply text-base font-normal line-height-normal no-underline text-info;
+}
+
+.service-info-sm {
+  @apply text-sm font-normal line-height-normal no-underline text-info;
+}
+
+// Service
+// Help
+
+.service-help-base {
+  @apply text-base font-normal line-height-normal no-underline text-help;
+}
+
+.service-help-sm {
+  @apply text-sm font-normal line-height-normal no-underline text-help;
+}
+
+// Anchor
+// Base: true
+.anchor-base {
+  @apply text-base font-normal line-height-normal no-underline text-info hover:underline;
+}
+
+.anchor-base:visited {
+  @apply text-base font-normal line-height-normal no-underline text-help hover:underline;
+}
+
+// Anchor
+// Base: false
+
+.anchor-sm {
+  @apply text-sm font-normal line-height-normal no-underline text-info hover:underline;
+}
+
+.anchor-sm:visited {
+  @apply text-sm font-normal line-height-normal no-underline text-help hover:underline;
+}

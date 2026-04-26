@@ -1,0 +1,76 @@
+svg.tabler-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+svg.tabler-icon.icon-reset-size {
+  width: unset;
+  height: unset;
+}
+
+svg.icon-size-21 {
+  width: 21px;
+  height: 21px;
+}
+
+svg.icon-size-24 {
+  width: 24px;
+  height: 24px;
+}
+
+svg.icon-custom {
+  width: var(--icon-size, 24px);
+  height: var(--icon-size, 24px);
+}
+
+svg.icon-color-secondary, svg.icon-secondary {
+  color: var(--text-color-secondary);
+}
+
+svg.icon-primary {
+  color: var(--primary-color);
+}
+
+// родной крестик input очень маленький
+.p-input-icon--clear svg.tabler-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.p-message .p-message-icon svg.tabler-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.p-button svg.tabler-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.p-button.p-button-sm svg.tabler-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.p-button.p-button-lg svg.tabler-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.p-button.p-button-icon-only.button-icon-56 svg.tabler-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+@keyframes ti-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ti-loader-animate {
+  animation: ti-spin 1s linear infinite;
+}
